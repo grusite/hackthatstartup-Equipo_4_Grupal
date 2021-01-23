@@ -22,12 +22,46 @@ Jorge Martín Oliver
 
 http://localhost:8080/
 
-#### answer:
+### return:
 `{"status":true,"data":"It works"}`
 
 #### user list
 
 http://localhost:8080/user/
 
+### return:
+`{"status":true,"data":{ [users] }`
 
+#### user by email
 
+http://localhost:8080/user/jorge.martinoliver@gmail.com
+
+### return:
+`{"status":true,"data":{ user }`
+
+#### create an user
+
+http://localhost:8080/user/
+
+### data
+{ email: "email", name: "name", education:[], experience:[] }
+
+### return:
+`{"status":true,"data":{ [users] }`
+
+#### update an user
+
+http://localhost:8080/user/:email
+
+### data
+{ email: "email", name: "name", education:[], experience:[] }
+
+### return:
+`{"status":true,"data":{ [userUpdated] }`
+
+#### delete an user
+
+http://localhost:8080/user/:email
+
+### return:
+`{ done: true, message: 'Deleted correctly' }`
