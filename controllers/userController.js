@@ -2,7 +2,7 @@ const debug = require('debug')('app:user');
 const User = require('../models/User');
 
 /**
-   * GET /users
+   * GET /user
    * Return all users in the DB
    */
 exports.listUsers = async (req, res) => {
@@ -10,7 +10,7 @@ exports.listUsers = async (req, res) => {
 }
 
 /**
-   * GET /users/:email
+   * GET /user/:email
    * Return a User with specified email
    */
 exports.readUser = async (req, res) => {
@@ -21,7 +21,7 @@ exports.readUser = async (req, res) => {
 
 
 /**
-   * POST /users
+   * POST /user
    * Create User
    */
 exports.addUser = async (req, res) => {
@@ -32,7 +32,7 @@ exports.addUser = async (req, res) => {
 }
 
 /**
-   * PUT /users:email
+   * PUT /user/:email
    * Update an user by email
    */
 exports.updateUser = async (req) => {
@@ -48,7 +48,7 @@ exports.updateUser = async (req) => {
 }
 
 /**
- * DELETE /users:id
+ * DELETE /user/:id
  * Delete an user
  */
 exports.deleteUser = async (req) => {
