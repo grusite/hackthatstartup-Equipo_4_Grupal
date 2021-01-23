@@ -65,3 +65,7 @@ http://localhost:8080/user/:email
 
 ### return:
 `{ done: true, message: 'Deleted correctly' }`
+
+### Testing
+
+As I hadn't time to create jest testing, I tested it with Postman
