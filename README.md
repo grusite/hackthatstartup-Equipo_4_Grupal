@@ -68,4 +68,4 @@ http://localhost:8080/user/:email
 
 ### Testing
 
-As I hadn't time to create jest testing, I tested it with Postman
+I started doing jest testing but I couldn't finished so I tested it with Postman
