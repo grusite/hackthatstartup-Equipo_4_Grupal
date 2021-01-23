@@ -16,3 +16,18 @@ Jorge Martín Oliver
 * public -> all necesary to interact with front
 * .env -> file with user information. The person who runs the code will need to refill the data
 
+### API Methods
+
+#### index
+
+http://localhost:8080/
+
+#### answer:
+`{"status":true,"data":"It works"}`
+
+#### user list
+
+http://localhost:8080/user/
+
+
+

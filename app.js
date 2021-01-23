@@ -10,7 +10,6 @@ const bodyParser = require('body-parser')
 const db = require('./lib/db')
 const { printDeliverError, getMorganConfig } = require('./lib/utils')
 
-var indexRouter = require('./routes/index');
 var userRouter = require('./routes/users');
 
 var app = express();
