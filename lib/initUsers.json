@@ -1,0 +1,56 @@
+{
+    "users": [
+        {
+            "email": "jorge.martinoliver@gmail.com",
+            "name": "Jorge",
+            "education": [
+                {
+                    "title": "Universidad Politecnica de Madrid",
+                    "description": "Ingenieria Telemática",
+                    "startYear": "2010",
+                    "endYear": "2014"
+                },
+                {
+                    "title": "Keepcoding",
+                    "description": "Bootcamp in Web Development",
+                    "startYear": "2019",
+                    "endYear": "2019"
+                }
+            ],
+            "experience": [
+                {
+                    "jobTitle": "Amadeus",
+                    "jobDescription": "Technical Lead",
+                    "jobStartYear": "2019",
+                    "jobEndYear": "2021"
+                },
+                {
+                    "jobTitle": "Vodafone",
+                    "jobDescription": "Technical Lead",
+                    "jobStartYear": "2014",
+                    "jobEndYear": "2019"
+                }
+            ]
+        },
+        {
+            "email": "prueba@gmail.com",
+            "name": "Jorge Prueba",
+            "education": [
+                {
+                    "title": "Keepcoding",
+                    "description": "Bootcamp in Web Development",
+                    "startYear": "2019",
+                    "endYear": "2019"
+                }
+            ],
+            "experience": [
+                {
+                    "jobTitle": "Vodafone",
+                    "jobDescription": "Technical Lead",
+                    "jobStartYear": "2014",
+                    "jobEndYear": "2019"
+                }
+            ]
+        }
+    ]
+}
