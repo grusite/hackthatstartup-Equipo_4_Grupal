@@ -1,5 +1,5 @@
-# Reto_1_Jorge_Martín
-Jorge Martín Oliver
+# Equipo_4_Grupal
+Equipo 4 - Bakend
 
 ## Instructions
 
