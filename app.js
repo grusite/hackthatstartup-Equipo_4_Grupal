@@ -11,6 +11,7 @@ const db = require('./lib/db')
 const { printDeliverError, getMorganConfig } = require('./lib/utils')
 
 var userRouter = require('./routes/user');
+var paymentRouter = require('./routes/payment');
 
 var app = express();
 
@@ -43,6 +44,7 @@ app.use(function (req, res, next) {
 
 app.get('/', async () => 'It works')
 app.use('/user', userRouter)
+app.use('/payment',paymentRouter)
 
 expressDeliver.errorHandler(app)
 

@@ -1,4 +1,4 @@
-const {mongoose} = require('mongoose');
+const mongoose = require('mongoose');
 
 const paymentSchema = new mongoose.Schema({
 
@@ -6,11 +6,6 @@ user_email: {
     type: String,
     required: true,
     lowercase: true,
-},
-
-email:{
-    type: String,
-    requred: true,
 },
 
 price:{
@@ -29,5 +24,5 @@ course:{
 }
 });
 
-const Payment = mongoose.model('Payment',paymentSchema);
-module.exports = {Donor}
+module.exports = mongoose.model('Payment',paymentSchema);
+

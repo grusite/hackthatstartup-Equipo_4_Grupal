@@ -1,0 +1,23 @@
+{
+    "payments": [
+        {
+            "user_email": "jorge.martinoliver@gmail.com",
+            
+            "price": 159,
+            
+            "reference": "ES09283541",
+            
+            "course": "Node JS from zero to hero"
+        },
+        {
+            "user_email": "jorge.martinoliver@gmail.com",
+            
+            "price": 100,
+            
+            "reference": "ES29265541",
+            
+            "course": "Web applications with Node"
+        }
+    ]
+            
+}

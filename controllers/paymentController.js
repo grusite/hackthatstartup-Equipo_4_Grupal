@@ -1,5 +1,5 @@
 const debug = require('debug')('app:payment');
-const User = require('../models/Payment');
+const Payment = require('../models/Payment');
 
 /**
    * GET /payment
