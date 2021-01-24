@@ -66,6 +66,37 @@ http://localhost:8080/user/:email
 ### return:
 `{ done: true, message: 'Deleted correctly' }`
 
+#### payment list
+
+http://localhost:8080/payment/
+
+### return:
+`{"status":true,"data":{ [payments] }`
+
+#### payment by reference
+
+http://localhost:3000/payment/ES09283541
+
+### return:
+`{"status":true,"data":{ payment }`
+
+#### payment by user mail
+
+http://localhost:3000/payment/?email=jorge.martinoliver@gmail.com
+
+### return:
+`{"status":true,"data":{ [payment-list] }`
+
+#### create an user
+
+http://localhost:8080/payment/
+
+### data
+{ user_email: "email", price: price, reference:"reference", course:"course" }
+
+### return:
+`{"status":true,"data":{ [payments] }`
+
 ### Testing
 
-I started doing jest testing but I couldn't finished so I tested it with Postman
+I started doing jest testing but I couldn't finish so I tested it with Postman
