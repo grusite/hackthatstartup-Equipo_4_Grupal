@@ -134,7 +134,7 @@ async function getUserFromCredentials(provider, payload) {
     try {
         // Get profile from provider
         if (provider === 'github') {
-            // profile = await providerService.getProfileFromGithub(payload);
+            profile = await providerService.getProfileFromGithub(payload);
         }
     } catch (err) {
         throw new InvalidCredentials(err.message);
