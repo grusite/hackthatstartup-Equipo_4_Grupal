@@ -30,7 +30,12 @@
                     "jobStartYear": "2014",
                     "jobEndYear": "2019"
                 }
-            ]
+            ],
+            "provider": {
+                "traditional": {
+                    "password": "$2b$12$6d/6P62tFn3QUnIr2fdFcuAiYheKBSK0SkFderfzkCkLUw1dn5l9m"
+                }
+            }
         },
         {
             "email": "prueba@gmail.com",
@@ -50,7 +55,12 @@
                     "jobStartYear": "2014",
                     "jobEndYear": "2019"
                 }
-            ]
+            ],
+            "provider": {
+                "traditional": {
+                    "password": "$2b$12$6d/6P62tFn3QUnIr2fdFcuAiYheKBSK0SkFderfzkCkLUw1dn5l9m"
+                }
+            }
         }
     ]
 }
