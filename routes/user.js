@@ -12,7 +12,6 @@ router.post('/register', userController.register);
 //CRUD routes
 router.get('/', userController.listUsers);
 router.get('/:userEmail', userController.readUser);
-router.post('/', userController.addUser);
 router.put('/:userEmail', userController.updateUser);
 router.delete('/:userEmail', userController.deleteUser);
 

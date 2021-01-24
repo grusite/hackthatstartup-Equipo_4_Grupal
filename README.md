@@ -25,31 +25,41 @@ http://localhost:8080/
 ### return:
 `{"status":true,"data":"It works"}`
 
-#### user list
+#### register user [POST]
+
+http://localhost:8080/user/register
+
+### data
+{ email: "email", name: "name", password:"password" }
+
+### return:
+`{"status":true,"data":{done: true, message: "Message sent to <email>"}`
+
+#### login user [POST]
+
+http://localhost:8080/user/login
+
+### data
+{ provider: "traditional|github", payload: {email:"email", password:"password"} }
+
+### return:
+`{"status":true,"data":{bearer: "<bearer>"}`
+
+#### user list [GET]
 
 http://localhost:8080/user/
 
 ### return:
 `{"status":true,"data":{ [users] }`
 
-#### user by email
+#### user by email [GET]
 
 http://localhost:8080/user/jorge.martinoliver@gmail.com
 
 ### return:
 `{"status":true,"data":{ user }`
 
-#### create an user
-
-http://localhost:8080/user/
-
-### data
-{ email: "email", name: "name", education:[], experience:[] }
-
-### return:
-`{"status":true,"data":{ [users] }`
-
-#### update an user
+#### update an user [PUT]
 
 http://localhost:8080/user/:email
 
@@ -59,7 +69,7 @@ http://localhost:8080/user/:email
 ### return:
 `{"status":true,"data":{ [userUpdated] }`
 
-#### delete an user
+#### delete an user [DELETE]
 
 http://localhost:8080/user/:email
 

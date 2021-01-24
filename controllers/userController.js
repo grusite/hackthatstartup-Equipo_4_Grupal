@@ -10,7 +10,7 @@ const {
 } = require('../services/userServices');
 
 /**
-   * GET /user/login
+   * POST /user/login
    * Check that the user exist, and if so return the JWT bearer
    */
 exports.login = async (req, res) => {
@@ -28,6 +28,18 @@ exports.login = async (req, res) => {
     return { bearer: token };
 }
 
+/**
+   * POST /user/register
+   * Check that the user doesn't exist, and if so create an user in DB with the user data
+   */
+exports.register = async (req, res) => {
+    const { email, name, password } = req.body;
+    await createTraditionalUser({ email, name, password });
+    return { done: true, message: `Message sent to ${email}` };
+}
+
+// For future I put methods to protect the routes
+// It loads the user in the request.
 exports.loadUser = async (req, res, next) => {
     const [, bearer] = (req.headers.authorization || '').split(' ');
 
@@ -38,25 +50,19 @@ exports.loadUser = async (req, res, next) => {
     }
     next();
 }
-
+// Take the user from the request and returns Unauthorized if not exist.
 exports.requireUser = async (req, res, next) => {
     if (!req.user) throw new Unauthorized();
     next();
 }
-
+// In case there is an user returns Unauthorized error
 exports.requireNoUser = (req, res, next) => {
     if (req.user) throw new Unauthorized('User should not be logged');
     next();
 }
-
+// Get the user from the request
 exports.getUser = (req, res) => {
     return req.user.toPublic();
-}
-
-exports.register = async (req, res) => {
-    const { email, name, password } = req.body;
-    await createTraditionalUser({ email, name, password });
-    return { done: true, message: `Message sent to ${email}` };
 }
 
 /**
@@ -75,18 +81,6 @@ exports.readUser = async (req, res) => {
     const [user] = await User.find({ email: req.params.userEmail })
     if (!user) throw new Error('User not found')
     return user
-}
-
-
-/**
-   * POST /user
-   * Create User
-   */
-exports.addUser = async (req, res) => {
-    const data = req.body
-    const newUser = new User(data)
-    const userSaved = await newUser.save()
-    return userSaved
 }
 
 /**
